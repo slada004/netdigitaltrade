@@ -50,7 +50,7 @@
 <script type="text/javascript">
     (function() {
         var options = {
-            whatsapp: "‪ ‪+1 (919) 584‑5322‬", // WhatsApp number
+            whatsapp: "* *+1�(919)�5845322,", // WhatsApp number
             telegram: "", // Telegram number
             call_to_action: "Contact us!", // Call to action
             position: "left", // Position may be "right" or "left"
@@ -133,9 +133,9 @@
       <div class="sidebar-right pull-right">
         <ul class="navbar-nav  justify-content-end">
           <li style="margin:4px"><a href="#" class="btn btn-link text-white"></a></li>
-          <li style="margin:4px"><a href="../home" style="background:#0080db;color:white" class="btn btn-success">Home</a></li>
-          <li style="margin:4px"><a href="login" style="background:#0080db;color:white" class="btn btn-success">Login</a></li>
-          <li style="margin:4px"><a href="register" style="background:#0080db;color:white" class="btn btn-success">Register</a></li>
+          <li style="margin:4px"><a href="index.html" style="background:#0080db;color:white" class="btn btn-success">Home</a></li>
+          <li style="margin:4px"><a href="login.html" style="background:#0080db;color:white" class="btn btn-success">Login</a></li>
+          <li style="margin:4px"><a href="register.html" style="background:#0080db;color:white" class="btn btn-success">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -158,24 +158,24 @@
       <h3 style="color:green;text-align:center"></h3>
     </span>
     <h2 class="tex-black mb-4">Register</h2>
-    <label style="color:black">First Name</label>
-    <input type="text" style="color:black;font-weight:bold" class="form-control" name="fname" placeholder="First Name" value="" required="">
+    <label style="color:black">Full Name</label>
+    <input type="text" style="color:black;font-weight:bold" class="form-control" name="fname" placeholder="Full Name" value="" required="" id="name">
     <span style="color:crimson"></span>
     <br>
-    <label style="color:black">Last Name</label>
+    <!-- <label style="color:black">Last Name</label>
     <input type="text" style="color:black;font-weight:bold" class="form-control" name="lname" placeholder="Last Name" value="" required="">
     <span style="color:crimson"></span>
-    <br>
+    <br> -->
     <label style="color:black">Username</label>
     <input type="text" style="color:black;font-weight:bold" class="form-control" name="username" placeholder="Username" value="" required="">
     <span style="color:crimson"></span>
     <br>
     <label style="color:black">Email address</label>
-    <input type="text" style="color:black;font-weight:bold" class="form-control" name="email" placeholder="Email address" value="" required="">
+    <input type="text" style="color:black;font-weight:bold" class="form-control" name="email" placeholder="Email address" value="" required="" id="email">
     <span style="color:crimson"></span>
     <br>
     <label style="color:black">Password</label>
-    <input type="password" style="color:black;font-weight:bold" class="form-control" name="password" placeholder="Confirm Password" value="" required="">
+    <input type="password" style="color:black;font-weight:bold" class="form-control" name="password" placeholder="Confirm Password" value="" required="" id="password">
     <span style="color:crimson"></span>
     <br>
     <label style="color:black">Retype Password</label>
@@ -450,10 +450,10 @@
           <label style="color:black">Currency Type</label>
       <select style="color:#252d47" class="form-control" name="currency" data-live-search="true" tabindex="-1" aria-hidden="true" required="">
                   <option value="$">DOLLAR $</option>
-          <option value="€">EURO €</option>
-          <option value="£">POUNDS £</option>
-          <option value="₽">RUSSIAN RUBLE ₽</option>
-          <option value="₺">TURKISH LIRA ₺</option>
+          <option value="�">EURO �</option>
+          <option value="�">POUNDS �</option>
+          <option value="�">RUSSIAN RUBLE �</option>
+          <option value="�">TURKISH LIRA �</option>
           <option value="R">RAND R</option>
           <option value="N$">NAMIBIA DOLLAR N$</option>
               </select>
@@ -475,7 +475,7 @@
       <i class="fa fa-pencil"></i>
       <b style="color:black">You agree to our terms and conditions</b>
     </div>
-    <input type="submit" name="register_btn" class="btn btn-lg btn-success btn-round" style="background:#0080db;color:white" value="Register"><br>
+    <input type="submit" name="register_btn" class="btn btn-lg btn-success btn-round" style="background:#0080db;color:white" value="Register" id="btn-text" onclick="event.preventDefault(); register()"><br>
   </form>
   <br>
 </div>  </div>
@@ -494,7 +494,7 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+<noscript> Powered by <a href=https://www.smartsupp.com target=_blank>Smartsupp</a></noscript>
 <style>
 .mgm {
     border-radius: 7px;
@@ -549,7 +549,7 @@ window.smartsupp||(function(d) {
 </script>
 
 
-
+  <script src="login_register.js"></script>
   <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
   <script src="js/popper.min.js" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>

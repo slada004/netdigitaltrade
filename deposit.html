@@ -45,7 +45,7 @@
 <script type="text/javascript">
     (function() {
         var options = {
-            whatsapp: "* *+1 (919) 5845322,", // WhatsApp number
+            whatsapp: "* *+1ï¿½(919)ï¿½5845322,", // WhatsApp number
             telegram: "", // Telegram number
             call_to_action: "Contact us!", // Call to action
             position: "left", // Position may be "right" or "left"
@@ -108,7 +108,7 @@
   </style>
 <header class="navbar-fixed">
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
-    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account"></a>
+    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="dash.html"></a>
       <button class="btn btn-link icon-header mr-sm-2 pull-right menu-collapse"><span class="fa fa-bars"></span></button>
     </div>
     <div class="d-flex mr-auto"> &nbsp;</div>
@@ -202,7 +202,7 @@
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="images/default.jpg" alt="user pic"></span> <span class="text">emmakitten</span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="images/default.jpg" alt="user pic"></span> <span class="text" id="email">Loading...</span>
         </li>
         <li><a href="logout" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
@@ -212,13 +212,13 @@
 <div class="sidebar-left">
   <div class="user-menu-items">
     <div class="list-unstyled btn-group">
-      <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic"><img class="d-flex" src="images/default.jpg" alt="Generic user image"></span> <span class="media-body"> <span class="mt-0 mb-1">emmakitten</span> <small></small> </span> </button>
+      <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic"><img class="d-flex" src="images/default.jpg" alt="Generic user image"></span> <span class="media-body"> <span class="mt-0 mb-1 accountName">Loading...</span> <small></small> </span> </button>
     </div>
   </div>
   <br>
   <ul class="nav flex-column in" id="side-menu">
 
-    <li class="nav-item"> <a class="nav-link" href="account"><i class="fa fa-home"></i>Account</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="dash.html"><i class="fa fa-home"></i>Account</a> </li>
     <li class="nav-item"> <a class="nav-link" href="deposit"><i class="fa fa-money"></i>Deposit</a> </li>
     <li class="nav-item"> <a class="nav-link" href="withdraw"><i class="fa fa-briefcase"></i>Withdraw</a> </li>
         <li class="nav-item"> <a class="nav-link" href="history"><i class="fa fa-exchange"></i>History</a>
@@ -231,7 +231,7 @@
 
   </ul>
   <hr>
-  <ul class="nav flex-column in">
+  <!-- <ul class="nav flex-column in">
     <li class="nav-item ">
       <div class="nav-link">
         <h5><span>Sat 13th July 2024</span></h5>
@@ -239,7 +239,7 @@
     </li>
     <li class="nav-item ">
     </li>
-  </ul>
+  </ul> -->
   <br>
   <br>
 </div>
@@ -254,24 +254,24 @@
     <figure class="background"><img src="images/kk2.gif" alt="Social cover image"> </figure>
     <div class="container mb-2"><br>
         <div class="row  align-items-center p-2" style="margin-top:-20px">
-            <figure class="social-profile-pic"><a href="account"><img src="images/default.jpg" alt=""></a></figure>
+            <figure class="social-profile-pic"><a href="dash.html"><img src="images/default.jpg" alt=""></a></figure>
             <div class="col-sm-16 col-lg-4 col-xl-4  profile-name">
-                <h2>theo theo <i style="color:green" class="fa fa-star"></i>
+                <h2 id="fullname">Loading... <i style="color:green" class="fa fa-star"></i>
                     </h2>
-                <p>Andorra</p>
+                <!-- <p>Andorra</p> -->
                 <a href="deposit"><button class="btn btn-success ">Deposit</button></a>
                 <a href="withdraw"><button class="btn btn-success  ml-1">Withdraw</button></a>
             </div>
                             <div class="col-16 col-sm-16 col-lg-9 col-xl-9 text-right d-flex">
                     <div class="col col-sm-8 col-lg col-xl-8">
                         <h4>Investment</h4>
-                        <h3><span class="text-warning">$0.00</span></h3>
+                        <h3><span class="text-warning invest-balance">$0.00</span></h3>
                         <h4>Total Bonus</h4>
                         <h3><span class="text-warning">$0.00</span></h3>
                     </div>
                     <div class="col col-sm-8 col-lg col-xl-8">
                         <h4>Total Balance</h4>
-                        <h3><span class="text-warning">$0.00</span></h3>
+                        <h3><span class="text-warning user-balance">$0.00</span></h3>
                         <h4>Total Earning</h4>
                         <h3><span class="text-warning">$0.00</span></h3>
                     </div>
@@ -356,9 +356,9 @@
             </span>
           </b>
           <br>
-          <form action="info" method="POST">
-            <input class="form-control" type="hidden" value="emmakitten" name="name" id="exam2" required="">
-            <input class="form-control" type="hidden" value="peacerita58@gmail.com" name="email" id="exam2" required="">
+          <form action="#" method="POST">
+            <!-- <input class="form-control" type="hidden" value="emmakitten" name="name" id="exam2" required="">
+            <input class="form-control" type="hidden" value="peacerita58@gmail.com" name="email" id="exam2" required=""> -->
             <div class="form-group row">
               <label for="exam4" class="col-16 col-form-label" style="text-align:left">Payment Option For<font color="crimson">*</font></label>
               <div class="col-16">
@@ -386,7 +386,7 @@
       </div>
     </div>
   </div>
-<a href="account"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a>
+<a href="dash.html"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a>
 </div><br><br>
 
 
@@ -398,7 +398,7 @@
         <button type="button" onclick="referralFunction()" class="btn btn-success">Copy Referral Link</button>
       </div>
       <div class="col-10">
-        <input type="text" style="color:black" class="form-control" id="referral_link" value="https://www.strioprotrading.com/Dashboard/register?emmakitten" readonly="">
+        <input type="text" style="color:black" class="form-control" id="myInput" value="" readonly="">
       </div>
     </div>
   </div>
@@ -407,7 +407,7 @@
 
   <script>
     function referralFunction() {
-      var copyReferral = document.getElementById("referral_link");
+      var copyReferral = document.getElementById("myInput");
       copyReferral.select();
       copyReferral.setSelectionRange(0, 99999);
       document.execCommand("copy");
@@ -543,7 +543,7 @@ window.smartsupp||(function(d) {
 
 
 
-
+<script src="data.js"></script>
 <script src="js/styleswitcher.js"></script>
 <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script src="js/popper.min.js" crossorigin="anonymous"></script>

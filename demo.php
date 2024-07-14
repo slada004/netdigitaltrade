@@ -5871,7 +5871,7 @@
                         onWheel
                     );
                 } else if ("onmousewheel" in document) {
-                    // ýýýýýýýýýý ýýýýýýý ýýýýýýý
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     this.mainCanvas.addEventListener(
                         "mousewheel",
                         onWheel

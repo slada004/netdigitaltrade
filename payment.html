@@ -1,11 +1,14 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.7, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <!-- <title>NetdigitalTrade | Dashboard</title> -->
+  <!-- <title>StrioProTrading | Dashboard</title> -->
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
@@ -15,6 +18,7 @@
   <script src="js/jquery.min.js"></script>
   <link rel="stylesheet" href="css/animate.min.css">
   <script src="sweetalert2%4010"></script>
+
   <!-- g-hide -->
   <style type="text/css">
     iframe.goog-te-banner-frame {
@@ -45,7 +49,7 @@
 <script type="text/javascript">
     (function() {
         var options = {
-            whatsapp: "* *+1�(919)�5845322,", // WhatsApp number
+            whatsapp: "‪ ‪+1 (919) 584‑5322‬", // WhatsApp number
             telegram: "", // Telegram number
             call_to_action: "Contact us!", // Call to action
             position: "left", // Position may be "right" or "left"
@@ -108,6 +112,7 @@
   </style>
 <header class="navbar-fixed">
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
+    <img src="vector/default.png" width="125px" height="70px">
     <div class="sidebar-left"> <a class="navbar-brand imglog" href="account"></a>
       <button class="btn btn-link icon-header mr-sm-2 pull-right menu-collapse"><span class="fa fa-bars"></span></button>
     </div>
@@ -117,7 +122,7 @@
         <!-- hidden-md-down -->
         <span>Lang:</span>
         <select class="custom-select lang-sel" style="width:110px;border: 0px solid #0080db00;" id="language" onchange="changeLanguageByButtonClick()">
-          <option value="en" selected="">English</option>
+          <option value="en" selected>English</option>
           <option value="af">Afrikanns</option>
           <option value="sq">Albanian</option>
           <option value="ar">Arabic</option>
@@ -194,15 +199,14 @@
       <li class="v-devider"></li>
 
       <li class="nav-item">
-        <a href="info"><button class="btn btn-link icon-header badgeCircle" aria-haspopup="true" aria-expanded="false"><span class="fa fa-envelope"></span><span class="badge-number bg-success"></span></button>
-          </a>       </li>
+              </li>
       <li class="v-devider"></li>
       <li class="nav-item "> <a class="btn btn-link icon-header menu-collapse-right" href="#"><span class="fa fa-podcast"></span> </a> </li>
     </ul>
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="vector/default.png" alt="user pic"></span> <span class="text">emmakitten</span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="vector/default.png" alt="user pic"></span> <span class="text"></span>
         </li>
         <li><a href="logout" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
@@ -212,7 +216,7 @@
 <div class="sidebar-left">
   <div class="user-menu-items">
     <div class="list-unstyled btn-group">
-      <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic"><img class="d-flex" src="vector/default.png" alt="Generic user image"></span> <span class="media-body"> <span class="mt-0 mb-1">emmakitten</span> <small></small> </span> </button>
+      <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic"><img class="d-flex" src="vector/default.png" alt="Generic user image"></span> <span class="media-body"> <span class="mt-0 mb-1"></span> <small></small> </span> </button>
     </div>
   </div>
   <br>
@@ -222,11 +226,11 @@
     <li class="nav-item"> <a class="nav-link" href="deposit"><i class="fa fa-money"></i>Deposit</a> </li>
     <li class="nav-item"> <a class="nav-link" href="withdraw"><i class="fa fa-briefcase"></i>Withdraw</a> </li>
         <li class="nav-item"> <a class="nav-link" href="history"><i class="fa fa-exchange"></i>History</a>
-    </li><li class="nav-item"> <a class="nav-link" href="transaction"><i class="fa fa-exchange"></i>Transactions</a>
-    </li><li class="nav-item"> <a class="nav-link" href="signal"><i class="fa fa-signal"></i>Signal Purchase</a>
-    </li><li class="nav-item"> <a class="nav-link" href="upgrade"><i class="fa fa-bank"></i>Account Upgrade</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="transaction"><i class="fa fa-exchange"></i>Transactions</a>
+    <li class="nav-item"> <a class="nav-link" href="signal"><i class="fa fa-signal"></i>Signal Purchase</a>
+    <li class="nav-item"> <a class="nav-link" href="upgrade"><i class="fa fa-bank"></i>Account Upgrade</a> </li>
     <li class="nav-item"> <a class="nav-link" href="settings"><i class="fa fa-gear"></i>Account Settings</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="mailto:support@NetdigitalTrade.com"><i class="fa fa-comment"></i>Contact Support</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="mailto:support@strioprotrading.com"><i class="fa fa-comment"></i>Contact Support</a> </li>
     <li class="nav-item"> <a class="nav-link" href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
 
   </ul>
@@ -234,7 +238,7 @@
   <ul class="nav flex-column in">
     <li class="nav-item ">
       <div class="nav-link">
-        <h5><span>Sun 14th July 2024</span></h5>
+        <h5><span>Tue 16th July 2024</span></h5>
       </div>
     </li>
     <li class="nav-item ">
@@ -253,27 +257,26 @@
 
     <figure class="background"><img src="images/kk2.gif" alt="Social cover image"> </figure>
     <div class="container mb-2"><br>
-        <div class="row  align-items-center p-2" style="margin-top:-20px">
-            <figure class="social-profile-pic"><a href="account"><img src="vector/default.png" alt=""></a></figure>
+        <div class="row  align-items-center p-2" style="margin-top: 58px">
+            <figure class="social-profile-pic"><a href="account"><img src="vector/default-removebg-preview.jpg" alt=""></a></figure>
             <div class="col-sm-16 col-lg-4 col-xl-4  profile-name">
-                <h2>theo theo <i style="color:green" class="fa fa-star"></i>
-                    </h2>
-                <p>Andorra</p>
+                <h2> </h2>
+                <p></p>
                 <a href="deposit"><button class="btn btn-success ">Deposit</button></a>
                 <a href="withdraw"><button class="btn btn-success  ml-1">Withdraw</button></a>
             </div>
                             <div class="col-16 col-sm-16 col-lg-9 col-xl-9 text-right d-flex">
                     <div class="col col-sm-8 col-lg col-xl-8">
                         <h4>Investment</h4>
-                        <h3><span class="text-warning">$0.00</span></h3>
+                        <h3><span class="text-warning">0.00</span></h3>
                         <h4>Total Bonus</h4>
-                        <h3><span class="text-warning">$0.00</span></h3>
+                        <h3><span class="text-warning">0.00</span></h3>
                     </div>
                     <div class="col col-sm-8 col-lg col-xl-8">
                         <h4>Total Balance</h4>
-                        <h3><span class="text-warning">$0.00</span></h3>
+                        <h3><span class="text-warning">0.00</span></h3>
                         <h4>Total Earning</h4>
-                        <h3><span class="text-warning">$0.00</span></h3>
+                        <h3><span class="text-warning">0.00</span></h3>
                     </div>
                 </div>
                     </div>
@@ -286,108 +289,198 @@
 
     <br><br>
 
-<title>NetdigitalTrade | Deposit</title>
+<title>StrioProTrading | Payment</title>
 
 
-
-<!-- <a href="account"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a> -->
-
+<div class="row">
+        <div class="col-sm-16 col-md-8">
+                <div class="card">
+                        <div class="card-header align-items-start justify-content-between flex">
+                                <h4 class="pull-left">Bitcoin Payment Details</h4>
+                                <ul class="nav nav-pills card-header-pills pull-right">
+                                        <li class="nav-item">
+                                                <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#bpd"><i class="fa fa-chevron-down"></i></button>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div id="bpd">
+                                <div class="card-body">
+                                        <div class="form-group" align="center">
+                                                <label for="recipient-name" class="form-control-label font-weight-bold">Scan Bitcoin QR Code to copy wallet address</label>
+                                                <hr>
+                                                <img src="https://quickchart.io/chart?cht=qr&chs=200x200&chl=bitcoin:0x3785E630212C0dE95baAF60F0f658B39F9364138" style="width:200px;">
+                                                <hr style="color:white">
+                                                <div class="input-group mb-3" style="width:80%">
+                                                        <input style="color:black" id="myInput" type="text" value="0x3785E630212C0dE95baAF60F0f658B39F9364138" class="form-control" readonly>
+                                                        <div class="input-group-append">
+                                                                <button type="button" onclick="copyWallet()" class="btn btn-success" value="Copy Wallet">Copy Wallet</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group" style="border: 0px solid grey;border-radius:5px;padding:15px;">
+                                                <p class="form-control-label font-weight-bold text-center" style="color:#17a2b8;font-size:12px">
+                                                        If your payment was successful, Please upload payment proof below.
+                                                </p>
+                                                <hr>
+                                                <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                                <label for="upload" class="input-group-text">
+                                                                        Upload Proof
+                                                                </label>
+                                                        </div>
+                                                        <input type="file" name="file" class="form-control" id="upload" required>
+                                                        <input type="hidden" name="amount" value="500">
+                                                        <input type="hidden" name="action" value="Deposit">
+                                                </div>
+                                                <hr>
+                                                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                                                <button type="submit" name="paid" style="float:right" class="btn btn-primary">Submit Payment Proof</button>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+        <div class="col-sm-16 col-md-8">
+                <div class="card">
+                        <div class="card-header align-items-start justify-content-between flex">
+                                <h4 class="pull-left">USDT Payment Details</h4>
+                                <ul class="nav nav-pills card-header-pills pull-right">
+                                        <li class="nav-item">
+                                                <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#epd"><i class="fa fa-chevron-down"></i></button>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div id="epd">
+                                <div class="card-body">
+                                        <div class="form-group" align="center">
+                                                <label for="recipient-name" class="form-control-label font-weight-bold">Scan USDT QR Code to copy wallet address</label>
+                                                <hr>
+                                                <img src="https://quickchart.io/chart?cht=qr&chs=200x200&chl=usdt:TAQtzQsnPZs2X8UwtvLXgMqhD864fzMK8Q" style="width:200px;">
+                                                <hr style="color:white">
+                                                <div class="input-group mb-3" style="width:80%">
+                                                        <input style="color:black" id="myInputa" type="text" value="TAQtzQsnPZs2X8UwtvLXgMqhD864fzMK8Q" class="form-control" readonly>
+                                                        <div class="input-group-append">
+                                                                <button type="button" onclick="copyWalleta()" class="btn btn-success" value="Copy Wallet">Copy Wallet</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group" style="border: 0px solid grey;border-radius:5px;padding:15px;">
+                                                <p class="form-control-label font-weight-bold text-center" style="color:#17a2b8;font-size:12px">
+                                                        If your payment was successful, Please upload payment proof below.
+                                                </p>
+                                                <hr>
+                                                <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                                <label for="upload" class="input-group-text">
+                                                                        Upload Proof
+                                                                </label>
+                                                        </div>
+                                                        <input type="file" name="file" class="form-control" id="upload" required>
+                                                        <input type="hidden" name="amount" value="500">
+                                                        <input type="hidden" name="action" value="Deposit">
+                                                </div>
+                                                <hr>
+                                                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                                                <button type="submit" name="paida" style="float:right" class="btn btn-primary">Submit Payment Proof</button>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+</div>
 
 
 
 
 <div class="row">
-  <div class="col-sm-16 col-md-8">
-    <div class="card">
-      <div class="card-header align-items-start justify-content-between flex">
-        <h4 class="pull-left">Deposit Using Bitcoin | USDT</h4>
-        <ul class="nav nav-pills card-header-pills pull-right">
-          <li class="nav-item">
-            <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#btc_deposit"><i class="fa fa-chevron-down"></i></button>
-          </li>
-        </ul>
-      </div>
-      <div class="card-body" id="btc_deposit">
-        <div class="ncard small">
-          <h6>Bitcoin | USDT Deposit Method</h6>
-          <hr>
-          <b>
-            <span style="color:gold"> Please make sure you upload your payment proof for quick payment verification</span><br>
-            <span style="color:#17a2b8 !important">On confirmation, our system will automatically Fund ur account and notify you via email address.
-            </span>
-          </b>
-          <br>
-          <form action="payments" method="POST">
-            <div class="form-group row">
-              <label for="exa1" class="col-16 col-form-label" style="text-align:left">Amount <font color="crison">$ *</font></label>
-              <div class="col-16">
-                <input class="form-control" type="number" step="any" value="" placeholder="0.00" name="invest" min="10" id="exa1" required="">
-                <input type="hidden" value="Deposit" name="action" required="">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-16">
-                <input class="btn btn-success" style="float:right" type="submit" name="investment" value="Make Deposit">
-              </div>
-            </div>
-          </form>
+        <div class="col-sm-16 col-md-16">
+                <div class="card">
+                        <div class="card-header align-items-start justify-content-between flex">
+                                <h4 class="pull-left">Purchase Your Coin From the Dealers below.</h4>
+                                <ul class="nav nav-pills card-header-pills pull-right">
+                                        <li class="nav-item">
+                                                <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#buc"><i class="fa fa-chevron-down"></i></button>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div id="buc">
+                                <div class="card-body">
+                                        <h2 style="text-align:center">< slide ></h2>
+                                        <div class="form-group" align="center">
+                                                <div class="scrollmenu">
+                                                        <style>
+                                                                th,
+                                                                td {
+                                                                        background: white;
+                                                                        color: black;
+                                                                        font-weight: bold;
+                                                                        font-size: 40px;
+                                                                        float: center;
+                                                                        text-align: center;
+                                                                        padding: 0px 10px;
+                                                                }
+                                                        </style>
+                                                        <table>
+                                                                <tr>
+                                                                        <th style="background-color:black;color:white">LUNO</th>
+                                                                        <th style="background-color:black;color:white">REMITANO</th>
+                                                                        <th style="background-color:black;color:white">MOONPAY</th>
+                                                                        <th style="background-color:black;color:white">CHAINBITS</th>
+                                                                        <th style="background-color:black;color:white">BITCOIN.COM</th>
+                                                                        <th style="background-color:black;color:white">COINMAMA</th>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td><img src="https://www.strioprotrading.com/Dashboard/img/coin/luno.png" alt=""></td>
+                                                                        <td><img src="https://www.strioprotrading.com/Dashboard/img/coin/remitano.png" alt=""></td>
+                                                                        <td><img src="https://www.strioprotrading.com/Dashboard/img/coin/moonpay.png" alt=""></td>
+                                                                        <td><img src="https://www.strioprotrading.com/Dashboard/img/coin/chainbits.png" alt=""></td>
+                                                                        <td><img src="https://www.strioprotrading.com/Dashboard/img/coin/bitcoin.png" alt=""></td>
+                                                                        <td><img src="https://www.strioprotrading.com/Dashboard/img/coin/coinmama.png" alt=""></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td><a href="https://www.luno.com" target="_blank" class="btn btn-primary">PURCHASE</a></td>
+                                                                        <td><a href="https://www.remitano.com" target="_blank" class="btn btn-primary">PURCHASE</a></td>
+                                                                        <td><a href="https://www.moonpay.io" target="_blank" class="btn btn-primary">PURCHASE</a></td>
+                                                                        <td><a href="https://buy.chainbits.com" target="_blank" class="btn btn-primary">PURCHASE</a></td>
+                                                                        <td><a href="https://www.bitcoin.com" target="_blank" class="btn btn-primary">PURCHASE</a></td>
+                                                                        <td><a href="https://www.coinmama.com" target="_blank" class="btn btn-primary btn-block">PURCHASE</a></td>
+                                                                </tr>
+                                                        </table>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-16 col-md-8">
-    <div class="card">
-      <div class="card-header align-items-start justify-content-between flex">
-        <h4 class="pull-left">Other Deposit Options</h4>
-        <ul class="nav nav-pills card-header-pills pull-right">
-          <li class="nav-item">
-            <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#order_depo"><i class="fa fa-chevron-down"></i></button>
-          </li>
-        </ul>
-      </div>
-      <div class="card-body" id="order_depo">
-        <div class="ncard small">
-          <h6>Request other available Deposit Method</h6>
-          <hr>
-          <b>
-            <span style="color:gold">Once requested, you will receive the payment details via our support mail....</span><br>
-            <span style="color:#17a2b8 !important"> Once payment is made using this method you are to send your payment
-              proof to our support mail <a href="mailto:support@NetdigitalTrade.com">support@NetdigitalTrade.com</a>
-            </span>
-          </b>
-          <br>
-          <form action="info" method="POST">
-            <input class="form-control" type="hidden" value="emmakitten" name="name" id="exam2" required="">
-            <input class="form-control" type="hidden" value="peacerita58@gmail.com" name="email" id="exam2" required="">
-            <div class="form-group row">
-              <label for="exam4" class="col-16 col-form-label" style="text-align:left">Payment Option For<font color="crimson">*</font></label>
-              <div class="col-16">
-                <select class="form-control" value="" name="deposit_type" id="exam4" required="">
-                  <option disabled="" value="" selected="">--Select Payment Option --</option>
-                                    <option value="LITCOIN">LITCOIN</option>
-                  <option value="ETHEREUM">ETHEREUM</option>
-                  <option value="BITCOIN CASH">BITCOIN CASH</option>
-                  <option value="USDT">USDT</option>
-                  <option value="PAYPAL">PAYPAL</option>
-                  <option value="STELLER">STELLER</option>
-                  <option value="WESTERN UNION">WESTERN UNION</option>
-                  <option value="SKRILL">SKRILL</option>
-                  <option value="MONEY GRAM">MONEY GRAM</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-16">
-                <input class="btn btn-success" style="float:right" type="submit" name="request_deposit" value="Request">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-<a href="account"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a>
-</div><br><br>
+        <a href="account"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a>
+</div>
+
+
+
+
+
+
+<script>
+  function copyWallet() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    Swal.fire('', '<b>Bitcoin Wallet Copied : </b> ' + copyText.value + '', '');
+  }
+  
+  function copyWalleta() {
+    var copyText = document.getElementById("myInputa");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    Swal.fire('', '<b>USDT Wallet Copied : </b> ' + copyText.value + '', '');
+  }
+</script><br><br>
 
 
 
@@ -398,7 +491,7 @@
         <button type="button" onclick="referralFunction()" class="btn btn-success">Copy Referral Link</button>
       </div>
       <div class="col-10">
-        <input type="text" style="color:black" class="form-control" id="referral_link" value="https://www.NetdigitalTrade.com/Dashboard/register?emmakitten" readonly="">
+        <input type="text" style="color:black" class="form-control" id="referral_link" value="https://www.strioprotrading.com/Dashboard/register?" readonly="">
       </div>
     </div>
   </div>
@@ -423,7 +516,7 @@
   <!-- TradingView Widget BEGIN -->
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <script type="text/javascript" src="js/embed-widget-ticker-tape.js" async="">
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
       {
         "symbols": [{
             "proName": "FOREXCOM:SPXUSD",
@@ -469,7 +562,7 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
-<noscript> Powered by <a href=https://www.smartsupp.com target=_blank>Smartsupp</a></noscript>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 <style>
 .mgm {
     border-radius: 7px;
@@ -601,12 +694,12 @@ window.smartsupp||(function(d) {
     }
   }
 </script>
-<script type="text/javascript" src="js/element.js"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 <!-- TradingView Widget BEGIN -->
 <div class="sidebar-right tradingview-widget-container ">
-  <iframe allowtransparency="true" style="box-sizing: border-box; height: 100%; width: 100%;" src="screener.html#%7B%22width%22%3A%22220%22%2C%22height%22%3A600%2C%22defaultColumn%22%3A%22overview%22%2C%22defaultScreen%22%3A%22general%22%2C%22market%22%3A%22forex%22%2C%22showToolbar%22%3Afalse%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22marketstockspro.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forexscreener%22%7D" frameborder="0"></iframe>
+  <iframe allowtransparency="true" style="box-sizing: border-box; height: 100%; width: 100%;" src="https://www.tradingview-widget.com/embed-widget/screener/?locale=en#%7B%22width%22%3A%22220%22%2C%22height%22%3A600%2C%22defaultColumn%22%3A%22overview%22%2C%22defaultScreen%22%3A%22general%22%2C%22market%22%3A%22forex%22%2C%22showToolbar%22%3Afalse%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22marketstockspro.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forexscreener%22%7D" frameborder="0"></iframe>
 
   <style>
     .tradingview-widget-copyright {
@@ -659,5 +752,5 @@ window.smartsupp||(function(d) {
 
 
 
-
-</body></html>
+</body>
+</html>

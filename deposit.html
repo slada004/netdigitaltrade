@@ -254,8 +254,8 @@
 
     <figure class="background"><img src="images/kk2.gif" alt="Social cover image"> </figure>
     <div class="container mb-2"><br>
-        <div class="row  align-items-center p-2" style="margin-top:-20px">
-            <figure class="social-profile-pic"><a href="dash.html"><img src="vector/default.png" alt=""></a></figure>
+        <div class="row  align-items-center p-2" style="margin-top: 58px">
+            <figure class="social-profile-pic"><a href="dash.html"><img src="vector/default-removebg-preview.jpg" alt=""></a></figure>
             <div class="col-sm-16 col-lg-4 col-xl-4  profile-name">
                 <h2 id="fullname">Loading... <i style="color:green" class="fa fa-star"></i>
                     </h2>
@@ -318,7 +318,12 @@
             </span>
           </b>
           <br>
-          <form action="payments" method="POST">
+          <form>
+            <script>
+              const payment = () => {
+                document.location.href = '/payment.html';
+              };
+            </script>
             <div class="form-group row">
               <label for="exa1" class="col-16 col-form-label" style="text-align:left">Amount <font color="crison">$ *</font></label>
               <div class="col-16">
@@ -328,7 +333,7 @@
             </div>
             <div class="form-group row">
               <div class="col-16">
-                <input class="btn btn-success" style="float:right" type="submit" name="investment" value="Make Deposit">
+                <input class="btn btn-success" style="float:right" type="submit" name="investment" value="Make Deposit" onclick="event.preventDefault(); payment();">
               </div>
             </div>
           </form>
@@ -336,7 +341,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-16 col-md-8">
+  <!-- <div class="col-sm-16 col-md-8">
     <div class="card">
       <div class="card-header align-items-start justify-content-between flex">
         <h4 class="pull-left">Other Deposit Options</h4>
@@ -357,9 +362,9 @@
             </span>
           </b>
           <br>
-          <form action="#" method="POST">
-            <!-- <input class="form-control" type="hidden" value="emmakitten" name="name" id="exam2" required="">
-            <input class="form-control" type="hidden" value="peacerita58@gmail.com" name="email" id="exam2" required=""> -->
+          <form>
+            <input class="form-control" type="hidden" value="emmakitten" name="name" id="exam2" required="">
+            <input class="form-control" type="hidden" value="peacerita58@gmail.com" name="email" id="exam2" required="">
             <div class="form-group row">
               <label for="exam4" class="col-16 col-form-label" style="text-align:left">Payment Option For<font color="crimson">*</font></label>
               <div class="col-16">
@@ -386,7 +391,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 <a href="dash.html"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a>
 </div><br><br>
 

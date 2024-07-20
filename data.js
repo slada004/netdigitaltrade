@@ -1,13 +1,11 @@
 (async function data () {
     try {
-      console.log('Fetching...');
       // console.log(document.getElementById('email').textContent = 'Emma');
   
       // const ipSite = localStorage.getItem('ip');
       // document.getElementById('ip').textContent = ipSite;
   
       // console.log(document.getElementsByClassName('user-balance')[0].textContent);
-      console.log('Loading...')
       const url = 'https://mich-backend.onrender.com/api/user';
   
       const req = await fetch(url, {
@@ -25,8 +23,6 @@
         // localStorage.removeItem('admin');
         document.location.href = '/login.html';
       } else {
-        console.log('Fetched');
-        console.log(res.user);
   
         const { accountBalance, 
           name, 
@@ -39,8 +35,6 @@
           blackList,
           isClient,
          } = res.user;
-  
-         console.log(isClient);
   
         if (accountLocked) {
           document.location.href = '/locked.html';
@@ -196,12 +190,12 @@
   
   
   async function withdrawsInfo () {
-    const admin = localStorage.getItem('admin');
+    const admin = Boolean(localStorage.getItem('admin'));
   
     if (admin === false || admin === null) {
       return null;
     }
-    console.log('working....')
+    localStorage.removeItem('recipientID');
     const walletNameArray = document.getElementById('accountName');
     const wallet = document.getElementById('accountNumber').value;
     try {
@@ -256,7 +250,7 @@
   
   async function send () {
     try {
-      document.getElementById('withdraw').textContent = 'Transferring...'
+      document.getElementById('withdraw').value = 'Transferring...'
       const body = {
         id: localStorage.getItem('recipientID'),
         amount: document.getElementById('amount').value,
@@ -299,12 +293,12 @@
           //   document.getElementById('success-div').style.display = 'none';
           // }, 1500);
         }
-        document.getElementById('withdraw').textContent = 'Transfer Fund';
+        document.getElementById('withdraw').value = 'Transfer Fund';
     } catch (error) {
       alert('Something went wrong');
       console.log(error);
       // alert('Something went wrong');
-      document.getElementById('withdraw').textContent = 'Transfer Fund';
+      document.getElementById('withdraw').value = 'Transfer Fund';
     }
   };
   
@@ -384,13 +378,13 @@
   
   
   async function send_withdraw() {
-    const admin = localStorage.getItem('admin');
+    const admin = Boolean(localStorage.getItem('admin'));
   
     if (admin) {
       return send();
+    } else {
+      return withdrawFunc();
     }
-  
-    return withdrawFunc();
   };
   
   function processPayment() {

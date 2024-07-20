@@ -1,3 +1,31 @@
+function initializeEmailJS() {
+  const options = {
+      publicKey: 'mcgbHphqZYbo9Dkp0',
+  };
+  emailjs.init('mcgbHphqZYbo9Dkp0'); // Replace with your EmailJS user ID
+}
+
+
+function sendEmail(recipientName, recipientEmail) {
+  console.log('Starting...')
+  initializeEmailJS()
+  var templateParams = {
+      to_name: recipientName,
+      to_email: recipientEmail,
+      from_name: 'Netdigitaltrade.com',
+      from_email: 'support@netdigitaltrade.com',
+  };
+
+  console.log('Initializing...')
+
+  emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams)
+      .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+          console.log('FAILED...', error);
+      });
+}
+
 async function login () {
     try {
   
@@ -80,11 +108,13 @@ async function login () {
           alert(res.message);
         } else {
           localStorage.setItem('token', res.token);
+          sendEmail(name, email);
           document.location.href = '/dash.html';
         }
       }
     } catch (error) {
       document.getElementById('btn-text').textContent = 'Sign In';
+      console.log(error);
       alert('Check Your Internet Connection');
     }
   };

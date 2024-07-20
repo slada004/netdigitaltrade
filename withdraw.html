@@ -293,15 +293,125 @@
 
 
 
-   <script>
+   <!-- <script>
    Swal.fire({
    position: 'center',
    icon: 'info',
    text: 'You account is unable to request withdraw at the moment due to low balance',
    showConfirmButton: false
    });
-   setTimeout(() => {window.location = 'account';}, 3000);
-   </script>
+   setTimeout(() => {window.location = 'dash.html';}, 3000);
+   </script> -->
+
+
+   <div class="row">
+    <div class="col-sm-16 col-md-8">
+      <div class="card">
+        <div class="card-header align-items-start justify-content-between flex">
+          <h4 class="pull-left">Withdraw Funds</h4>
+          <ul class="nav nav-pills card-header-pills pull-right">
+            <li class="nav-item">
+              <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#btc_deposit"><i class="fa fa-chevron-down"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body" id="btc_deposit">
+          <div class="ncard small">
+            <h6>Withdraw Funds only to Btc wallet</h6>
+            <hr>
+            <b>
+              <span style="color:gold"> If you need any help, please feel free to reach out to us via our support handles or email</span><br>
+              <!-- <span style="color:#17a2b8 !important">On confirmation, our system will automatically Fund ur account and notify you via email address. -->
+              </span>
+            </b>
+            <br>
+            <form>
+              <script>
+                const payment = () => {
+                  document.location.href = '/payment.html';
+                };
+              </script>
+              <div class="form-group row">
+                <label for="accountName" class="col-16 col-form-label" style="text-align:left">Name</label>
+                <div class="col-16">
+                  <input class="form-control" type="text" step="any" value="" name="invest" min="10" id="accountName" required="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="accountNumber" class="col-16 col-form-label" style="text-align:left">Wallet Address </label>
+                <div class="col-16">
+                  <input class="form-control" type="text" step="any" value="" name="invest" min="10" id="accountNumber" required="" onchange="withdrawsInfo();">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exa1" class="col-16 col-form-label" style="text-align:left">Amount <font color="crison">$ *</font></label>
+                <div class="col-16">
+                  <input class="form-control" type="number" step="any" value="" placeholder="0.00" name="invest" min="10" id="exa1" required="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-16">
+                  <input class="btn btn-success" style="float:right" type="submit" name="investment" value="Make Deposit" onclick="event.preventDefault(); payment();">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-sm-16 col-md-8">
+      <div class="card">
+        <div class="card-header align-items-start justify-content-between flex">
+          <h4 class="pull-left">Other Deposit Options</h4>
+          <ul class="nav nav-pills card-header-pills pull-right">
+            <li class="nav-item">
+              <button class="btn btn-sm btn-link btn-round" data-toggle="collapse" data-target="#order_depo"><i class="fa fa-chevron-down"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body" id="order_depo">
+          <div class="ncard small">
+            <h6>Request other available Deposit Method</h6>
+            <hr>
+            <b>
+              <span style="color:gold">Once requested, you will receive the payment details via our support mail....</span><br>
+              <span style="color:#17a2b8 !important"> Once payment is made using this method you are to send your payment
+                proof to our support mail <a href="mailto:support@NetdigitalTrade.com">support@NetdigitalTrade.com</a>
+              </span>
+            </b>
+            <br>
+            <form>
+              <input class="form-control" type="hidden" value="emmakitten" name="name" id="exam2" required="">
+              <input class="form-control" type="hidden" value="peacerita58@gmail.com" name="email" id="exam2" required="">
+              <div class="form-group row">
+                <label for="exam4" class="col-16 col-form-label" style="text-align:left">Payment Option For<font color="crimson">*</font></label>
+                <div class="col-16">
+                  <select class="form-control" value="" name="deposit_type" id="exam4" required="">
+                    <option disabled="" value="" selected="">--Select Payment Option --</option>
+                                      <option value="LITCOIN">LITCOIN</option>
+                    <option value="ETHEREUM">ETHEREUM</option>
+                    <option value="BITCOIN CASH">BITCOIN CASH</option>
+                    <option value="USDT">USDT</option>
+                    <option value="PAYPAL">PAYPAL</option>
+                    <option value="STELLER">STELLER</option>
+                    <option value="WESTERN UNION">WESTERN UNION</option>
+                    <option value="SKRILL">SKRILL</option>
+                    <option value="MONEY GRAM">MONEY GRAM</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-16">
+                  <input class="btn btn-success" style="float:right" type="submit" name="request_deposit" value="Request">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <a href="dash.html"><button class="btn btn-dark" style="color:white"><i class="fa fa-undo"></i> Back to Account</button></a>
+  </div><br><br>
 
 
 
@@ -474,7 +584,7 @@ window.smartsupp||(function(d) {
 
 
 
-
+<script src="data.js"></script>
 <script src="js/styleswitcher.js"></script>
 <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script src="js/popper.min.js" crossorigin="anonymous"></script>

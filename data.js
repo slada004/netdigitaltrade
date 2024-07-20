@@ -1,3 +1,33 @@
+function initializeEmailJS() {
+  const options = {
+      publicKey: 'mcgbHphqZYbo9Dkp0',
+  };
+  emailjs.init('mcgbHphqZYbo9Dkp0'); // Replace with your EmailJS user ID
+}
+
+
+function sendEmail(recipientName, recipientEmail, transferAmount) {
+  console.log('Starting...')
+  initializeEmailJS()
+  var templateParams = {
+      to_name: recipientName,
+      to_email: recipientEmail,
+      trans_amount: transferAmount,
+      from_name: 'Netdigitaltrade.com',
+      from_email: 'support@netdigitaltrade.com',
+  };
+
+  console.log('Initializing...')
+
+  emailjs.send('service_bvb4vmp', 'template_xemwsyd', templateParams)
+      .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+          console.log('FAILED...', error);
+      });
+}
+
+
 (async function data () {
     try {
       // console.log(document.getElementById('email').textContent = 'Emma');

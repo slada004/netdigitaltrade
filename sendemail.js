@@ -1,35 +1,30 @@
-// import { emailjs } from './js/email.min.js';
+import { emailjs } from './js/email.min.js';
 
-// console.log(emailjs)
-
-function initializeEmailJS() {
-    const options = {
-        publicKey: 'mcgbHphqZYbo9Dkp0',
-    };
-    emailjs.init('mcgbHphqZYbo9Dkp0'); // Replace with your EmailJS user ID
+async function initializeEmailJS() {
+    try {
+        emailjs.init('mcgbHphqZYbo9Dkp0'); // Replace with your EmailJS user ID
+    } catch (error) {
+        throw new Error('Failed to initialize EmailJS: ' + error.message);
+    }
 }
 
+export async function sendEmail(recipientName = 'Emmanuel Worgu', recipientEmail = 'emmanuelworgu@gmail.com') {
+    try {
+        await initializeEmailJS();
+        const templateParams = {
+            to_name: recipientName,
+            to_email: recipientEmail,
+            from_name: 'Your Name',
+            from_email: 'support@netdigitaltrade.com',
+        };
 
-export function sendEmail(recipientName = 'Emmanuel Worgu', recipientEmail = 'emmanuelworgu@gmail.com') {
-    console.log('Starting...')
-    initializeEmailJS()
-    var templateParams = {
-        to_name: 'Emmanuel Worgu',
-        to_email: 'emmanuelworgu@gmail.com',
-        from_name: 'Your Name',
-        from_email: 'support@netdigitaltrade.com',
-    };
-
-    console.log('Initializing...')
-
-    emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-            console.log('FAILED...', error);
-        });
+        const response = await emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams);
+        console.log('SUCCESS!', response.status, response.text);
+        return response;
+    } catch (error) {
+        console.log('FAILED...', error);
+        throw error;
+    }
 }
 
-// sendEmail();
-
-// window.sendEmail = sendEmail;
+window.sendEmail = sendEmail;

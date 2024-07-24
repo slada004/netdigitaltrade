@@ -1,30 +1,33 @@
 function initializeEmailJS() {
   const options = {
-      publicKey: 'mcgbHphqZYbo9Dkp0',
+    publicKey: 'mcgbHphqZYbo9Dkp0',
   };
-  emailjs.init('mcgbHphqZYbo9Dkp0'); // Replace with your EmailJS user ID
+  emailjs.init('mcgbHphqZYbo9Dkp0'); // Use the publicKey from the options object
 }
 
+async function sendEmail(recipientName, recipientEmail) {
+  console.log('Starting...');
+  initializeEmailJS();
 
-function sendEmail(recipientName, recipientEmail) {
-  console.log('Starting...')
-  initializeEmailJS()
-  var templateParams = {
-      to_name: recipientName,
-      to_email: recipientEmail,
-      from_name: 'Netdigitaltrade.com',
-      from_email: 'support@netdigitaltrade.com',
+  const templateParams = {
+    to_name: recipientName,
+    to_email: recipientEmail,
+    from_name: 'Netdigitaltrade.com',
+    from_email: 'support@netdigitaltrade.com',
   };
 
-  console.log('Initializing...')
+  console.log('Initializing...');
 
-  emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams)
-      .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
-          console.log('FAILED...', error);
-      });
+  try {
+    const response = await emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams);
+    console.log('SUCCESS!', response.status, response.text);
+  } catch (error) {
+    console.log('FAILED...', error);
+    document.getElementById('btn-text').textContent = 'Sign In';
+    return;
+  }
 }
+
 
 async function login () {
     try {
@@ -108,7 +111,7 @@ async function login () {
           alert(res.message);
         } else {
           localStorage.setItem('token', res.token);
-          sendEmail(name, email);
+          await sendEmail(name, email);
           document.location.href = '/dash.html';
         }
       }

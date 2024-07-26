@@ -1,32 +1,78 @@
-function initializeEmailJS() {
-  const options = {
-    publicKey: 'mcgbHphqZYbo9Dkp0',
+// function initializeEmailJS() {
+//   const options = {
+//     publicKey: 'mcgbHphqZYbo9Dkp0',
+//   };
+//   emailjs.init('mcgbHphqZYbo9Dkp0'); // Use the publicKey from the options object
+// }
+
+// async function sendEmail(recipientName, recipientEmail) {
+//   console.log('Starting...');
+//   initializeEmailJS();
+
+//   const templateParams = {
+//     to_name: recipientName,
+//     to_email: recipientEmail,
+//     from_name: 'Netdigitaltrade.com',
+//     from_email: 'support@netdigitaltrade.com',
+//   };
+
+//   console.log('Initializing...');
+
+//   try {
+//     const response = await emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams);
+//     console.log('SUCCESS!', response.status, response.text);
+//   } catch (error) {
+//     console.log('FAILED...', error);
+//     document.getElementById('btn-text').textContent = 'Sign In';
+//     return;
+//   }
+// }
+
+async function sendEmail(name, email) {
+  const data = {
+      service_id: 'service_bvb4vmp',
+      template_id: 'template_zvt21up',
+      user_id: 'uM5U-SIs5hA-EGEuw',
+      template_params: { // note the change from templateParams to template_params
+          to_name: name,
+          to_email: email,
+          from_name: 'Netdigitaltrade.com',
+          from_email: 'support@netdigitaltrade.com',
+      },
   };
-  emailjs.init('mcgbHphqZYbo9Dkp0'); // Use the publicKey from the options object
-}
 
-async function sendEmail(recipientName, recipientEmail) {
-  console.log('Starting...');
-  initializeEmailJS();
-
-  const templateParams = {
-    to_name: recipientName,
-    to_email: recipientEmail,
-    from_name: 'Netdigitaltrade.com',
-    from_email: 'support@netdigitaltrade.com',
-  };
-
-  console.log('Initializing...');
+  const url = 'https://api.emailjs.com/api/v1.0/email/send';
 
   try {
-    const response = await emailjs.send('service_bvb4vmp', 'template_zvt21up', templateParams);
-    console.log('SUCCESS!', response.status, response.text);
+      const req = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+          },
+      });
+
+      if (!req.ok) {
+          throw new Error(`HTTP error! Status: ${req.status}`);
+      }
+
+      const contentType = req.headers.get('content-type');
+
+      let res;
+      if (contentType && contentType.includes('application/json')) {
+          res = await req.json();
+      } else {
+          res = await req.text();
+      }
+
+      console.log('Response:', res);
   } catch (error) {
-    console.log('FAILED...', error);
-    document.getElementById('btn-text').textContent = 'Sign In';
-    return;
+      console.error('Error:', error);
   }
 }
+
+// email();
 
 
 async function login () {
@@ -107,7 +153,7 @@ async function login () {
         // console.log(res);
   
         if (req.status !==200) {
-          document.getElementById('btn-text').textContent = 'Sign In';
+          document.getElementById('btn-text').value = 'Sign In';
           alert(res.message);
         } else {
           localStorage.setItem('token', res.token);
@@ -116,7 +162,7 @@ async function login () {
         }
       }
     } catch (error) {
-      document.getElementById('btn-text').textContent = 'Sign In';
+      document.getElementById('btn-text').value = 'Sign In';
       console.log(error);
       alert('Check Your Internet Connection');
     }

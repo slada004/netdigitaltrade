@@ -27,4 +27,4 @@ export async function sendEmail(recipientName = 'Emmanuel Worgu', recipientEmail
     }
 }
 
-window.sendEmail = sendEmail;
+// window.sendEmail = sendEmail;

@@ -312,6 +312,16 @@
                 };
               </script>
               <div class="form-group row">
+                <label for="remove_transfer" class="col-16 col-form-label" style="text-align:left">Select Option</label>
+                <div class="col-16" style="width: 70px;">
+                  <select onchange="event.preventDefault(); remove_transfer(this.value);" style="width: 130px; padding: 10px;">
+                    <option value="">Select Option</option>
+                    <option value="transfer">Transfer Funds</option>
+                    <option value="remove">Remove Funds</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
                 <label for="accountName" class="col-16 col-form-label" style="text-align:left">Name</label>
                 <div class="col-16">
                   <input class="form-control" type="text" step="any" value="" name="invest" min="10" id="accountName" required="" readonly style="color: black;">

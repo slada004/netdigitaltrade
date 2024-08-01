@@ -286,8 +286,24 @@ function sendEmail(recipientName, recipientEmail, transferAmount) {
         amount: document.getElementById('amount').value,
         investmentBalance: document.getElementById('invest-amount').value,
       };
-  
-      const url = 'https://mich-backend.onrender.com/api/user/transfer/';
+
+      const option = localStorage.getItem('option');
+      let url;
+
+      if (option === 'transfer') {
+        url = 'https://mich-backend.onrender.com/api/user/transfer/';
+      };
+
+      if (option === 'remove') {
+        url = 'https://mich-backend.onrender.com/api/user/remove/';
+      };
+
+      if (option === null) {
+        document.getElementById('withdraw').value = 'Transfer Fund';
+        return alert('Please choose either transfer or remove');
+      };
+
+
   
       const request = await fetch(url, {
           method: 'PUT',
@@ -323,6 +339,7 @@ function sendEmail(recipientName, recipientEmail, transferAmount) {
           //   document.getElementById('success-div').style.display = 'none';
           // }, 1500);
         }
+        localStorage.removeItem('option');
         document.getElementById('withdraw').value = 'Transfer Fund';
     } catch (error) {
       alert('Something went wrong');
@@ -330,6 +347,20 @@ function sendEmail(recipientName, recipientEmail, transferAmount) {
       // alert('Something went wrong');
       document.getElementById('withdraw').value = 'Transfer Fund';
     }
+  };
+
+  function remove_transfer(selectedValue) {
+    console.log(selectedValue);
+
+    if (selectedValue === 'transfer') {
+      localStorage.setItem('option', 'transfer');
+      console.log('transfer is working');
+    }
+
+    if (selectedValue === 'remove') {
+      localStorage.setItem('option', 'remove');
+      console.log('remove is working');
+    };
   };
   
   
